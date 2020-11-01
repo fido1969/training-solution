@@ -28,7 +28,7 @@ public class Client {
     public void setAddress(String address) {
         this.address = address;
     }
-    private void migrate(String newAddress){
-        this.name=newAddress;
+    public void migrate(String newAddress){
+        name=newAddress;
     }
 }

@@ -8,12 +8,12 @@ public class ClientMain {
         client.setAddress("6000, Kecskemét Magyar utca 27.");
         client.setYear(1969);
 
-        System.out.println(client.getName());
-        System.out.println(client.getAddress());
-        System.out.println(client.getYear());
+        System.out.println("Name: "+client.getName());
+        System.out.println("Address: "+client.getAddress());
+        System.out.println("Birth of year: "+client.getYear());
 
-        System.out.println("The address was changed successfilly!");
         client.migrate("6000, Kecskemét Damjanich utca 1.");
-        System.out.println("Your new address: "+client.getAddress());
+        System.out.println("The change of address was successful!");
+        System.out.println("The new address: "+client.getAddress());
     }
 }

@@ -1,11 +1,20 @@
 package classstructuremethods;
 
+import java.util.Scanner;
+
 public class NoteMain {
     public static void main(String[] args) {
         Note note=new Note();
-        note.setName("Szabadkai János");
-        note.setTopic("IntelliJ programming");
-        note.setText("Learning about Methods in Java.");
+        Scanner scanner=new Scanner(System.in);
+
+        System.out.println("Name:");
+        note.setName(scanner.nextLine());
+
+        System.out.println("Topic: ");
+        note.setTopic(scanner.nextLine());
+
+        System.out.println("Text: ");
+        note.setText(scanner.nextLine());
 
         System.out.println(note.getNoteText());
     }

@@ -29,6 +29,6 @@ public class Client {
         this.address = address;
     }
     public void migrate(String newAddress){
-        name=newAddress;
+        this.name=newAddress;
     }
 }

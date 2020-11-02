@@ -18,11 +18,11 @@ public class Store {
         return stock;
     }
 
-    public void store(int stockPlus) {
-        this.stock += stockPlus;
+    public void store(int store) {
+        this.stock += store;
     }
 
-    public void dispatch(int stockMinus) {
-        this.stock -= stockMinus;
+    public void dispatch(int dispatch) {
+        this.stock -= dispatch;
     }
 }

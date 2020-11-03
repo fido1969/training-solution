@@ -6,21 +6,27 @@ public class Bank {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Bank account number: ");
+        System.out.println("Bank account number: ");
+
         String accountNumber1 = scanner.nextLine();
-        System.out.print("Name of the owner: ");
+
+        System.out.println("Name of the owner: ");
+
         String owner1 = scanner.nextLine();
-        System.out.print("Opening amount: ");
+
+        System.out.println("Opening amount: ");
+
         int openingAmount1 = scanner.nextInt();
+
         scanner.nextLine();
 
         BankAccount bankAccount1 = new BankAccount(accountNumber1, owner1, openingAmount1);
 
-        System.out.print("Bank account number: ");
+        System.out.println("Bank account number: ");
         String accountNumber2 = scanner.nextLine();
-        System.out.print("Name of the owner: ");
+        System.out.println("Name of the owner: ");
         String owner2 = scanner.nextLine();
-        System.out.print("Opening amount: ");
+        System.out.println("Opening amount: ");
         int openingAmount2 = scanner.nextInt();
         scanner.nextLine();
 
@@ -29,12 +35,12 @@ public class Bank {
         System.out.println(bankAccount2.getInfo());
         System.out.println(bankAccount1.getInfo());
 
-        System.out.print("What is the depositAmount to the bankAccount1: ");
+        System.out.println("What is the depositAmount to the bankAccount1: ");
         int depositAmount = scanner.nextInt();
         bankAccount1.deposit(depositAmount);
         System.out.println(bankAccount1.getInfo());
 
-        System.out.print("What is the withdrawAmount from the bankAccount1: ");
+        System.out.println("What is the withdrawAmount from the bankAccount1: ");
         int withdrawAmount = scanner.nextInt();
         bankAccount1.withdraw(withdrawAmount);
         System.out.println(bankAccount1.getInfo());

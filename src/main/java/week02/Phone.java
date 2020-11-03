@@ -1,9 +1,11 @@
 package week02;
 
-import javax.sound.midi.Soundbank;
+import java.util.Scanner;
 
 public class Phone {
+
     private String type;
+
     private int meme;
 
     public Phone(String type, int meme) {
@@ -28,8 +30,10 @@ public class Phone {
     }
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-        Phone phone1=new Phone("Android",2);
-        Phone phone2=new Phone("Apple",4);
+        Phone phone1 = new Phone("Android", 2);
+
+        Phone phone2 = new Phone("Apple", 4);
     }
 }

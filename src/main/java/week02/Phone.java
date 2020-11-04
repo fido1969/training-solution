@@ -6,11 +6,11 @@ public class Phone {
 
     private String type;
 
-    private int meme;
+    private int mem;
 
-    public Phone(String type, int meme) {
+    public Phone(String type, int mem) {
         this.type = type;
-        this.meme = meme;
+        this.mem = mem;
     }
 
     public String getType() {
@@ -21,19 +21,37 @@ public class Phone {
         this.type = type;
     }
 
-    public int getMeme() {
-        return meme;
+    public int getMem() {
+        return mem;
     }
 
-    public void setMeme(int meme) {
-        this.meme = meme;
+    public void setMem(int mem) {
+        this.mem = mem;
     }
 
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
-        Phone phone1 = new Phone("Android", 2);
+        System.out.println("Give the type of the phone: ");
+        String type1=scanner.nextLine();
 
-        Phone phone2 = new Phone("Apple", 4);
+        System.out.println("Give the mem of the phone: ");
+        int mem1=scanner.nextInt();
+        scanner.nextLine();
+
+        Phone phone1 = new Phone(type1,mem1);
+
+        System.out.println("Give the type of the phone: ");
+        String type2=scanner.nextLine();
+
+        System.out.println("Give the mem of the phone: ");
+        int mem2=scanner.nextInt();
+        scanner.nextLine();
+
+        Phone phone2 = new Phone(type2,mem2);
+
+        System.out.println(phone1.getType()+" : "+phone1.getMem());
+        System.out.println(phone2.getType()+" : "+phone2.getMem());
     }
 }

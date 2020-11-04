@@ -25,8 +25,8 @@ public class TimeMain {
         Time time1 = new Time(hour1, minute1, second1);
         Time time2 = new Time(hour2, minute2, second2);
 
-        System.out.println("The first time " + time1.toString() + " = " + time1.getInMinute());
-        System.out.println("The second time " + time2.toString() + " = " + time2.getInSecond());
-        System.out.println("The first time earlier than the second time:" + time1.earlierThan(time2));
+        System.out.println("The first time " + time1.toString() + " = " + time1.getInMinute()+" minutes");
+        System.out.println("The second time " + time2.toString() + " = " + time2.getInSecond()+" seconds");
+        System.out.println("The first time earlier than the second time: " + time1.earlierThan(time2));
     }
 }

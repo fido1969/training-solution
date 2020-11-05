@@ -17,9 +17,8 @@ public class InvestmentMain {
 
         System.out.println("Tőke: " + investment.getFund());
         System.out.println("Hozam 50 napra: " + investment.getYield(50));
-        System.out.println("Hozam 300 napra: " + investment.getYield(300));
-        System.out.println("Kivett összeg 180 nap után: " + investment.close(180));
-        System.out.println("Kivett összeg 181 nap után: " + investment.close(181));
+        System.out.println("Kivett összeg 80 nap után: " + investment.close(80));
+        System.out.println("Kivett összeg 90 nap után: " + investment.close(90));
 
     }
 

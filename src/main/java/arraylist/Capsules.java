@@ -49,6 +49,11 @@ public class Capsules {
         System.out.println(capsules.getCapsulesColours());
         System.out.println(capsules.listSize());
 
+        List<String > clearList = new ArrayList<>();
+        clearList=capsules.getCapsulesColours();
+        clearList.clear();
+        System.out.println(capsules.getCapsulesColours());
+        System.out.println(clearList);
     }
 
 }

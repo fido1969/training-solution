@@ -6,6 +6,8 @@ import java.util.List;
 
 public class Controller {
 
+    private Office office;
+
     public static void main(String[] args) {
         Controller controller = new Controller();
         controller.readOffice();
@@ -14,7 +16,7 @@ public class Controller {
     }
 
     public void readOffice() {
-        Office office = new Office();
+        office = new Office();
         Scanner scanner = new Scanner(System.in);
         String nameNew;
         int lengthNew;
@@ -34,13 +36,16 @@ public class Controller {
 
             System.out.print(i + ". Office width: ");
             widthNew = scanner.nextInt();
-
+            scanner.nextLine();
             MeetingRoom roomNew = new MeetingRoom(nameNew, lengthNew, widthNew);
             office.addMeetingRoom(roomNew);
+
         }
+        System.out.println();
     }
 
     public void printMenu() {
+        System.out.println("              MENU");
         System.out.println("1. Meeting rooms in order");
         System.out.println("2. Meeting rooms in reverse order");
         System.out.println("3. Every second meeting room");
@@ -48,14 +53,14 @@ public class Controller {
         System.out.println("5. Search by exact name");
         System.out.println("6. Search by name fragment");
         System.out.println("7. Search by area");
+        System.out.println();
     }
 
     public void runMenu() {
-        Office office = new Office();
         Scanner scanner = new Scanner(System.in);
-        int numberOfMenu;
-        System.out.println("Choose a number from the MENU: ");
-        numberOfMenu = scanner.nextInt();
+        System.out.print("Choose a number from the MENU: ");
+        int numberOfMenu = scanner.nextInt();
+        scanner.nextLine();
 
         switch (numberOfMenu) {
             case 1:
@@ -83,9 +88,12 @@ public class Controller {
             case 7:
                 System.out.print("Office minimum area: ");
                 int area = scanner.nextInt();
+                scanner.nextLine();
                 office.printAreasLargerThan(area);
                 break;
             default:
+                throw new IllegalArgumentException();
         }
     }
 }
+

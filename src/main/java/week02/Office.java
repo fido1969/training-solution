@@ -5,10 +5,10 @@ import java.util.List;
 
 public class Office {
 
-    List<MeetingRoom> meetingRooms = new ArrayList<>();
+    public List<MeetingRoom> meetingRooms = new ArrayList<>();
 
     public void addMeetingRoom(MeetingRoom meetingRoom) {
-        meetingRooms.add(meetingRoom);
+        this.meetingRooms.add(meetingRoom);
     }
 
     public void printNames() {
@@ -25,7 +25,7 @@ public class Office {
 
     public void printEvenNames() {
         for (int i = 0; i < meetingRooms.size(); i++) {
-            if (i % 2 == 0) {
+            if (i % 2 != 0) {
                 System.out.println(meetingRooms.get(i).getName());
             }
         }
@@ -33,8 +33,8 @@ public class Office {
 
     public void printAreas() {
         for (int i = 0; i < meetingRooms.size(); i++) {
-            System.out.println(meetingRooms.get(i).getName() + ", " + meetingRooms.get(i).getWidth()
-                    + " m ," + meetingRooms.get(i).getLength() + " m , " + meetingRooms.get(i).getArea() + " m2");
+            System.out.println("Name: "+meetingRooms.get(i).getName() + ", " +"Lenght: "+meetingRooms.get(i).getLength()
+                    + " m ," +"Weight: "+meetingRooms.get(i).getWidth() + " m , " +"Area: "+meetingRooms.get(i).getArea() + " m2");
         }
     }
 

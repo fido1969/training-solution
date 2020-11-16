@@ -11,6 +11,9 @@ public class ArrayOfArraysMain {
         arrayOfArraysMain.printArrayOfArrays(arrayOfArraysMain.triangularMatrix(4));
         System.out.println();
         arrayOfArraysMain.printArrayOfArrays(arrayOfArraysMain.getValues());
+        System.out.println();
+        arrayOfArraysMain.printArrayOfArraysString(arrayOfArraysMain.spaceArray(3));
+
 
       /*  for (int i = 0; i < arrayOfArraysMain.multiplicationTable(4).length; i++) {
             for (int j = 0; j < arrayOfArraysMain.multiplicationTable(4)[i].length; j++) {
@@ -59,6 +62,31 @@ public class ArrayOfArraysMain {
             values[i] = new int[numberOfDays[i]];
         }
         return values;
+    }
+    String[][] spaceArray(int size) {
+        String[][] spaceArrayString = new String[size][size];
+        int[][] spaceArrayInt = new int[size][size];
+        for (int i = 0; i < spaceArrayInt.length; i++) {
+            for (int j = 0; j < spaceArrayInt[i].length; j++) {
+                spaceArrayInt[i][j] = (j + 1) * (int) (Math.pow(10, i));
+                if (spaceArrayInt[i][j]<10){
+                    spaceArrayString[i][j]="  "+spaceArrayInt[i][j]+" ";
+                }else if ((spaceArrayInt[i][j]>=10) && (spaceArrayInt[i][j]<=99)){
+                    spaceArrayString[i][j]=" "+spaceArrayInt[i][j]+" ";
+                }else if ((spaceArrayInt[i][j]>=100) && (spaceArrayInt[i][j]<=999)){
+                    spaceArrayString[i][j]=""+spaceArrayInt[i][j]+" ";
+                }
+            }
+        }
+        return spaceArrayString;
+    }
+    public void printArrayOfArraysString(String[][] a) {
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a[i].length; j++) {
+                System.out.print(a[i][j]);
+            }
+            System.out.println();
+        }
     }
 
 

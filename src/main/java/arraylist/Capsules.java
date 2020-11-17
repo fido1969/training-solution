@@ -31,6 +31,14 @@ public class Capsules {
         return capsulesColours.size();
     }
 
+    public List<String> listCopy(List<String>capsulesColours) {
+        List<String> newCapsulesColours = new ArrayList<>();
+        for (int i = 0; i < capsulesColours.size(); i++) {
+            newCapsulesColours.add(capsulesColours.get(i));
+        }
+        return newCapsulesColours;
+    }
+
 
     public static void main(String[] args) {
         Capsules capsules = new Capsules();

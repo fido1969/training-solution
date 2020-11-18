@@ -1,7 +1,5 @@
 package finalmodifier;
 
-import static finalmodifier.CircleCalculator.PI;
-
 public class PiMain {
 
     public static void main(String[] args) {
@@ -15,6 +13,10 @@ public class PiMain {
         System.out.println("The surfaceArea of cylinder: " + new CylinderCalculator().calculateSurfaceArea(2, 2));
         System.out.println();
         System.out.println("The volume of the cylinder: " + new CylinderCalculator().calculateVolume(2, 2));
+        System.out.println();
+        System.out.println("The surfaceArea of cylinder: " + new CylinderCalculatorBasedOnCircle().calculateSurfaceArea(2, 2));
+        System.out.println();
+        System.out.println("The volume of the cylinder: " + new CylinderCalculatorBasedOnCircle().calculateVolume(2, 2));
 
     }
 }

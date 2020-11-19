@@ -11,6 +11,10 @@ public class Warrior {
     private double skill;
     private Point position;
 
+    public double getSkill() {
+        return skill;
+    }
+
     public Warrior(String name, Point position) {
         this.name = name;
         this.position = position;

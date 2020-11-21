@@ -37,4 +37,8 @@ public class Task {
     public void start() {
         startDateTime = LocalDateTime.now();
     }
+
+    public String toString() {
+        return "Started at " + startDateTime + " and took " + duration + " minutes to finish.";
+    }
 }

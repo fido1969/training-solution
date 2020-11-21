@@ -17,7 +17,7 @@ public class ObjectsMain {
 
         Book book = new Book();
 
-        System.out.println("a "+book);
+        System.out.println("Trainer " +book);
 
         book = null;
 

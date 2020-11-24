@@ -4,7 +4,7 @@ public class ChangeLetter {
 
     private static final String VOWELS = "aeiou";
 
-    public String changeVowels(String text) {
+    public String changeVowels0(String text) {
         //if (text == null) throw new IllegalArgumentException("text is null");
         //if (text.isBlank()) throw new IllegalArgumentException("text is empty");
         String replacedText = "";
@@ -32,10 +32,27 @@ public class ChangeLetter {
         return replacedText;
     }
 
+    public String changeVowels2(String text) {
+
+        StringBuilder replacedText = new StringBuilder();
+
+        for (int i = 0; i < text.length(); i++) {
+            String char_ = text.toLowerCase().substring(i, i + 1);
+            if (VOWELS.contains(char_)) {
+                replacedText.append('*');
+            } else {
+                replacedText.append(text.substring(i, i + 1));
+            }
+        }
+        return replacedText.toString();
+    }
+
+
     public static void main(String[] args) {
 
         ChangeLetter changeLetter = new ChangeLetter();
-        System.out.println(changeLetter.changeVowels("AeIoUmnbvCxyíűáéLKjhgfdsúőpztRWqóüö"));
-        System.out.println(changeLetter.changeVowels("AeIoUmnbvCxyíűáéLKjhgfdsúőpztRWqóüö"));
+        System.out.println(changeLetter.changeVowels0("AeIoUmnbvCxyaíűáéLKjhgfdsúőpztRWqóüö"));
+        System.out.println(changeLetter.changeVowels1("AeIoUmnbvCxyaíűáéLKjhgfdsúőpztRWqóüö"));
+        System.out.println(changeLetter.changeVowels2("AeIoUmnbvCxyaíűáéLKjhgfdsúőpztRWqóüö"));
     }
 }

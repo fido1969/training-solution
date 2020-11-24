@@ -3,6 +3,7 @@ package week05d02;
 public class ChangeLetter {
 
     private static final String VOWELS = "aeiou";
+    private static final String VOWELS_1 = "aeiouAEIOU";
 
     public String changeVowels0(String text) {
         //if (text == null) throw new IllegalArgumentException("text is null");
@@ -47,6 +48,12 @@ public class ChangeLetter {
         return replacedText.toString();
     }
 
+    public String changeVowels3(String text) {
+        for (char c : VOWELS_1.toCharArray()) {
+            text=text.replace(c,'*');
+        }
+        return text;
+    }
 
     public static void main(String[] args) {
 
@@ -54,5 +61,6 @@ public class ChangeLetter {
         System.out.println(changeLetter.changeVowels0("AeIoUmnbvCxyaíűáéLKjhgfdsúőpztRWqóüö"));
         System.out.println(changeLetter.changeVowels1("AeIoUmnbvCxyaíűáéLKjhgfdsúőpztRWqóüö"));
         System.out.println(changeLetter.changeVowels2("AeIoUmnbvCxyaíűáéLKjhgfdsúőpztRWqóüö"));
+        System.out.println(changeLetter.changeVowels3("AeIoUmnbvCxyaíűáéLKjhgfdsúőpztRWqóüö"));
     }
 }

@@ -9,31 +9,47 @@ public class ListCounter {
     // összeszámolja azokat amik 'a' vagy 'A' betűvel kezdődnek,
     //Ha nulla elemű a tömb,vagy nincs benne ilyen elem, akkor 0-t adjon vissza.
 
-
-
-    private static final String A_A = "aA";
-
     public int setStringList(List<String> stringList) {
 
         int count = 0;
-        if (stringList.size()==0){
-            System.out.println(0);
-        }else {
-            for (int i = 0; i < stringList.size(); i++) {
-                if (stringList.get(i).startsWith("a")||stringList.get(i).startsWith("A")) {
-                    count++;
-                }
+        for (int i = 0; i < stringList.size(); i++) {
+            if (stringList.get(i).startsWith("a") || stringList.get(i).startsWith("A")) {
+                count++;
             }
-            return count;
         }
-        return 0;
+        return count;
     }
 
 
+    public int setStringList1(List<String> stringList) {
+
+        int count = 0;
+        for (String str : stringList) {
+            if (str.toUpperCase().startsWith("A")) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public int setStringList2(List<String> stringList) {
+
+        int count = 0;
+        for (String str : stringList) {
+            if (str.toUpperCase().charAt(0) == 'A') {
+                count++;
+            }
+        }
+        return count;
+    }
+
     public static void main(String[] args) {
-        ListCounter listCounter= new ListCounter();
+        ListCounter listCounter = new ListCounter();
 
         List<String> stringList = Arrays.asList("Alma", "ablak", "ajtó");
         System.out.println(listCounter.setStringList(stringList));
+        System.out.println(listCounter.setStringList1(stringList));
+        System.out.println(listCounter.setStringList2(stringList));
+
     }
 }

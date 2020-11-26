@@ -21,7 +21,7 @@ public class ListCounter {
     }
 
 
-    public int setStringList1(List<String> stringList) {
+   /* public int setStringList1(List<String> stringList) {
 
         int count = 0;
         for (String str : stringList) {
@@ -30,9 +30,9 @@ public class ListCounter {
             }
         }
         return count;
-    }
+    }*/
 
-    public int setStringList2(List<String> stringList) {
+    /*public int setStringList2(List<String> stringList) {
 
         int count = 0;
         for (String str : stringList) {
@@ -41,9 +41,9 @@ public class ListCounter {
             }
         }
         return count;
-    }
+    }*/
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         ListCounter listCounter = new ListCounter();
 
         List<String> stringList = Arrays.asList("Alma", "ablak", "ajtó");
@@ -51,5 +51,5 @@ public class ListCounter {
         System.out.println(listCounter.setStringList1(stringList));
         System.out.println(listCounter.setStringList2(stringList));
 
-    }
+    }*/
 }

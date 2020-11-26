@@ -6,6 +6,11 @@ public class ChangeLetter {
     private static final String VOWELS_1 = "aeiouAEIOU";
 
     public String changeVowels0(String text) {
+        //A week05d02.ChangeLetter osztályban írj meg egy String changeVowels(String) metódust,
+        // mely kicseréli a paraméterként átadott szövegben az angol magánhangzókat csillag karakterre.
+        // Írj hozzá teszteseteket is!
+        //A feladat megoldása és GitHubra feltöltése mindenki számára kötelező, nem feltétlen ma, hanem a hét végéig.
+
         //if (text == null) throw new IllegalArgumentException("text is null");
         //if (text.isBlank()) throw new IllegalArgumentException("text is empty");
         String replacedText = "";

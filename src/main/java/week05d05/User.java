@@ -13,8 +13,15 @@ public class User {
     private String email;
 
     public User(String firstName, String lastName, String email) {
-        if ((!email.contains("@")) || (!email.contains("."))) {
-            throw new IllegalArgumentException("Email address in not correct: "+email);
+
+        int occurence = email.indexOf("@");
+
+        if (!email.contains("@")) {
+            throw new IllegalArgumentException("Email address in not correct, \'@\' is missing\n " + email);
+        }
+
+        if (!email.substring(occurence).contains(".")) {
+            throw new IllegalArgumentException("Email address in not correct, \'.\' is missing\n " + email);
         }
         this.firstName = firstName;
         this.lastName = lastName;
@@ -23,6 +30,14 @@ public class User {
 
     public void getFullName() {
         System.out.println(firstName + " " + lastName);
+    }
+
+    public void getFullName1() {
+        System.out.println(firstName.concat(" ").concat(lastName));
+    }
+
+    public void getFullName2() {
+        System.out.println(new StringBuilder().append(firstName).append(" ").append(lastName));
     }
 
     public String getFirstName() {
@@ -41,11 +56,16 @@ public class User {
 
         User user = new User("Szabadkai", "János", "szabadkai.janos@freemail.hu");
         user.getFullName();
-        System.out.println(user.firstName+"-"+user.lastName+"-"+user.email);
+        user.getFullName1();
+        user.getFullName2();
+        System.out.println(user.firstName + "-" + user.lastName + "-" + user.email);
 
         User user1 = new User("Szabadkai", "János", "szabadkai.janosfreemail.hu");
-        user1.getFullName();
-        System.out.println(user1.firstName+"-"+user1.lastName+"-"+user1.email);
+        user.getFullName1();
+        System.out.println(user1.firstName + "-" + user1.lastName + "-" + user1.email);
 
+        User user2 = new User("Szabadkai", "János", "szabadkai.janos@freemailhu");
+        user.getFullName2();
+        System.out.println(user2.firstName + "-" + user2.lastName + "-" + user2.email);
     }
 }

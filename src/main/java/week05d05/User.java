@@ -20,7 +20,7 @@ public class User {
             throw new IllegalArgumentException("Email address in not correct, \'@\' is missing\n " + email);
         }
 
-        if (!email.substring(occurence).contains(".")) {
+       if (!email.substring(occurence).contains(".")) {
             throw new IllegalArgumentException("Email address in not correct, \'.\' is missing\n " + email);
         }
         this.firstName = firstName;

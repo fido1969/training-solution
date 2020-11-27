@@ -16,7 +16,7 @@ class UserTest {
     @Test
     public void createNotValidEmailTest() {
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            throw new IllegalArgumentException("Email address in not correct, \\'@\\' is missing");
+            throw new IllegalArgumentException("Email address in not correct, '@' is missing");
         });
     }
 }

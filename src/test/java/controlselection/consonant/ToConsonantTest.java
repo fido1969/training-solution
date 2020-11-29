@@ -1,44 +1,26 @@
 package controlselection.consonant;
 
-import controlselection.month.DayInMonth;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ToConsonantTest {
 
     @Test
-    public void testNumberOfDays() {
-        assertEquals(31, new DayInMonth().numberOfDays(2017, "május"));
-        assertEquals(30, new DayInMonth().numberOfDays(2017, "június"));
-        assertEquals(28, new DayInMonth().numberOfDays(2017, "február"));
-        assertEquals(28, new DayInMonth().numberOfDays(1900, "február"));
+    public void testVowel() {
+        assertEquals('b', new ToConsonant().convertToConsonant('a'));
+        assertEquals('f', new ToConsonant().convertToConsonant('e'));
+        assertEquals('j', new ToConsonant().convertToConsonant('i'));
     }
 
     @Test
-    public void testCase() {
-        assertEquals(31, new DayInMonth().numberOfDays(2017, "MáJuS"));
+    public void testConsonant() {
+        assertEquals('b', new ToConsonant().convertToConsonant('b'));
+        assertEquals('g', new ToConsonant().convertToConsonant('g'));
+        assertEquals('z', new ToConsonant().convertToConsonant('z'));
     }
 
-    @Test
-    public void testLeapYear() {
-        assertEquals(29, new DayInMonth().numberOfDays(2012, "február"));
-    }
 
-    @Test
-    public void testLeapYear100() {
-        assertEquals(28, new DayInMonth().numberOfDays(1900, "február"));
-    }
-
-    @Test
-    public void testLeapYear400() {
-        assertEquals(29, new DayInMonth().numberOfDays(2000, "február"));
-    }
-
-    @Test
-    public void testIllegalMonth() {
-        assertThrows(IllegalArgumentException.class, () -> new DayInMonth().numberOfDays(2012, "abc"));
-    }
 }
 
 

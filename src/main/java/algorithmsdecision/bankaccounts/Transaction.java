@@ -11,6 +11,7 @@ public class Transaction {
     private TransactionStatus status;
 
 
+
     public Transaction(String accountNumber, TransactionOperation transactionOperation, int amount, LocalDateTime dateOfTransaction) {
         this.accountNumber = accountNumber;
         this.transactionOperation = transactionOperation;

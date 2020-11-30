@@ -14,30 +14,34 @@ public class ListSelector {
     // azaz egyes indexű elem páratlan, stb.
     //Ha üres a lista, akkor üres stringet adjunk vissza. Ha a paraméterül kapott lista null, akkor dobjunk
     // IllegalArgumentExceptiont a metódusban.
+    //Bónusz: A páros sorszámú elemek vesszővel elválasztva. pl.: {"alma","körte","Barack"}--> [almabarack]
 
-    public StringBuilder ListSelector(List<String> stringList) {
+    public StringBuilder getEvenIndexElements(List<String> stringList) {
 
-        if (stringList == null){
-            throw new IllegalArgumentException("This List is \"null\"!");
+        if (stringList == null) {
+            throw new IllegalArgumentException("Null parameter not accepted!");
         }
         StringBuilder stringBuilder = new StringBuilder("");
         if (stringList.size() == 0) {
             return stringBuilder;
         }
         stringBuilder = new StringBuilder("[");
-        for (int i = 0; i < stringList.size(); i++) {
+        stringBuilder.append(stringList.get(0));
+        for (int i = 1; i < stringList.size(); i++) {
             if (i % 2 == 0) {
-                stringBuilder.append(stringList.get(i));
+                stringBuilder.append(","+stringList.get(i));
             }
         }
         return stringBuilder.append("]");
     }
 
-    public static void main(String[] args) {
-        List<String> list = Arrays.asList("aa", "bb", "cc", "dd", "ee", "ff", "gg", "hh");
-        //List<String> list = Arrays.asList();
-        //List<String> list = null;
+   /* public static void main(String[] args) {
+        List<String> list0 = Arrays.asList("aa", "bb", "cc", "dd", "ee", "ff", "gg", "hh");
+        List<String> list1 = Arrays.asList();
+        List<String> list2 = null;
         ListSelector listSelector = new ListSelector();
-        System.out.println(listSelector.ListSelector(list).toString());
-    }
+        System.out.println("List0: "+listSelector.getEvenIndexElements(list0));
+        System.out.println("List1: "+listSelector.getEvenIndexElements(list1));
+        System.out.println(listSelector.getEvenIndexElements(list2));
+    }*/
 }

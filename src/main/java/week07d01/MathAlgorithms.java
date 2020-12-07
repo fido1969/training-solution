@@ -12,16 +12,55 @@ public class MathAlgorithms {
 
     public static boolean isPrime(int x) {
 
-        if (x < 2) throw new IllegalArgumentException("'Number 'X'' can not be smaller than '2'!");
+        if (x < 1) {
+            throw new IllegalArgumentException("Wrong parameter!");
+        }
 
-        boolean prim;
+        if (x == 1) {
+            return false;
+        }
+
+        if (x == 2) {
+            return true;
+        }
+
         for (int j = 2; j <= Math.sqrt(x); j++) {
             if (x % j == 0) {
-                prim = false;
-                return prim;
+                return false;
             }
         }
-        prim = true;
-        return prim;
+        return true;
     }
+
+    public static boolean isPrimeOtherWay(int x) {
+
+        if (x < 1) {
+            throw new IllegalArgumentException("Wrong parameter!");
+        }
+
+        int divisor = 0;
+
+        for (int i = 1; i <= x; i++) {
+            if (x % i == 0) {
+                divisor++;
+            }
+        }
+        if (divisor == 2) {
+            return true;
+        }
+        return false;
+    }
+
+    /*public static void main(String[] args) {
+
+        System.out.println(MathAlgorithms.isPrime(12));
+        System.out.println(MathAlgorithms.isPrime(7));
+
+        try {
+            MathAlgorithms.isPrime(-56);
+        }catch (IllegalArgumentException iae){
+            System.out.println(iae.getMessage());
+        }
+
+    }*/
 }

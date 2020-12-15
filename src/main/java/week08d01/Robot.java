@@ -4,6 +4,7 @@ public class Robot {
 
     private Point position = new Point(0, 0);
 
+
     public Point move(String movement) {
         movement = movement.toUpperCase();
         for (int i = 0; i < movement.length(); i++) {

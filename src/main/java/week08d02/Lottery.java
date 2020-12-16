@@ -3,6 +3,10 @@ package week08d02;
 import java.util.*;
 
 public class Lottery {
+    //Mai Junior/Mid-level feladat:
+    //Készíts a week08d02 csomagban egy Lottery osztályt, melynek legyen egy (winnersGenerator) getNumbers(int interval, int numbers) metódusa,
+    //ami visszaad egy listát amiben (5 véletlen szám van 1-90 között) numbers mennyiségű véletlen szám van 1-interval között,
+    //tehát kvázi készíts egy lottósorsoló programot. A sorrendre nem kell figyelni, a lényeg, hogy a számok különbözők legyenek!
 
     public List<Integer> winnersGenerator(int interval, int numbers, int seed) {
         List<Integer> winners = new ArrayList<>(numbers);

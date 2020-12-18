@@ -11,8 +11,11 @@ public class UserValidator {
     }
 
     public boolean isValidEmail(String email) {
-        if ((email.indexOf("@") != -1) && (email.indexOf(".") != -1) && (email.indexOf(".") > email.indexOf("@"))
-                && (email.indexOf("@.") == -1) && (email.indexOf("@") > 0) && (email.indexOf(".") < email.length() - 1)) {
+        if ((email.indexOf("@") != -1) && (email.indexOf(".") != -1)
+                && (email.indexOf(".") > email.indexOf("@"))
+                && (email.indexOf("@.") == -1)
+                && (email.indexOf("@") > 0)
+                && (email.indexOf(".") < email.length() - 1)) {
             return true;
         } else {
             return false;

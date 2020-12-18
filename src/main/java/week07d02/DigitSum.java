@@ -18,7 +18,7 @@ public class DigitSum {
 
     public static void main(String[] args) {
         DigitSum digitSum= new DigitSum();
-        System.out.println(digitSum.sumOfDigits(345));
+        System.out.println(digitSum.sumOfDigits(1345));
 
     }
 

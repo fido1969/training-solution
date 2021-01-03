@@ -37,10 +37,4 @@ public class PrintFormat {
         return String.format(new Locale("hu", "HU"), formatString, i, j, k);
     }
 
-    public static void main(String[] args) {
-
-        PrintFormat printFormat = new PrintFormat();
-        System.out.println( printFormat.formatMessageWithIntegerParameters("12 13 14",1,13));
-    }
-
 }

@@ -27,4 +27,20 @@ public class Cv {
                 '}';
     }
 
+    public int findSkillLevelByName(String skillName) {
+        for (Skill skill : skillList) {
+            if (skillName.equals(skill.getName())) {
+                return skill.getLevel();
+            }
+        }
+        throw new IllegalArgumentException("Wrong data.");
+    }
+
+    public void addSkills(String... skillsOfCv) {
+        for (String item : skillsOfCv) {
+
+
+        }
+    }
+
 }

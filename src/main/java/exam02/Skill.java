@@ -21,4 +21,12 @@ public class Skill {
     public int getLevel() {
         return level;
     }
+
+    @Override
+    public String toString() {
+        return "Skill{" +
+                "name='" + name + '\'' +
+                ", level=" + level +
+                '}';
+    }
 }

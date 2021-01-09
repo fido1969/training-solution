@@ -34,14 +34,4 @@ public class ListSelector {
         }
         return stringBuilder.append("]");
     }
-
-   /* public static void main(String[] args) {
-        List<String> list0 = Arrays.asList("aa", "bb", "cc", "dd", "ee", "ff", "gg", "hh");
-        List<String> list1 = Arrays.asList();
-        List<String> list2 = null;
-        ListSelector listSelector = new ListSelector();
-        System.out.println("List0: "+listSelector.getEvenIndexElements(list0));
-        System.out.println("List1: "+listSelector.getEvenIndexElements(list1));
-        System.out.println(listSelector.getEvenIndexElements(list2));
-    }*/
 }

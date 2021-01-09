@@ -1,7 +1,5 @@
 package week05d03;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class ListCounter {
@@ -20,8 +18,7 @@ public class ListCounter {
         return count;
     }
 
-
-   /* public int setStringList1(List<String> stringList) {
+    public int setStringList1(List<String> stringList) {
 
         int count = 0;
         for (String str : stringList) {
@@ -30,9 +27,9 @@ public class ListCounter {
             }
         }
         return count;
-    }*/
+    }
 
-    /*public int setStringList2(List<String> stringList) {
+    public int setStringList2(List<String> stringList) {
 
         int count = 0;
         for (String str : stringList) {
@@ -41,15 +38,5 @@ public class ListCounter {
             }
         }
         return count;
-    }*/
-
-    /*public static void main(String[] args) {
-        ListCounter listCounter = new ListCounter();
-
-        List<String> stringList = Arrays.asList("Alma", "ablak", "ajtó");
-        System.out.println(listCounter.setStringList(stringList));
-        System.out.println(listCounter.setStringList1(stringList));
-        System.out.println(listCounter.setStringList2(stringList));
-
-    }*/
+    }
 }

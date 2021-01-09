@@ -12,7 +12,7 @@ class ListSelectorTest {
 
     @Test
     void listSelectorWithEvenIndexElementsTest(){
-        assertEquals("[aa,cc,ee,gg]",listSelector.getEvenIndexElements(Arrays.asList("a", "bb", "cc", "dd", "ee", "ff", "gg", "hh")).toString());
+        assertEquals("[aa,cc,ee,gg]",listSelector.getEvenIndexElements(Arrays.asList("aa", "bb", "cc", "dd", "ee", "ff", "gg", "hh")).toString());
     }
 
     @Test

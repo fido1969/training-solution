@@ -5,18 +5,19 @@ import java.util.List;
 
 public class Search {
 
-    public List<Integer> getIndexOfChar(String str,char c){
-        List<Integer> result = new ArrayList<>();
-        for (int i=0;i<str.length();i++){
-            if (str.charAt(i)==c){
-                result.add(i);
+    public List<Integer> getIndexesOfChar(String str, char character) {
+        if (str == null || str.isBlank()) {
+            throw new IllegalArgumentException("Wrong data!");
+        }
+        if (character == ' ') {
+            throw new IllegalArgumentException("Wrong character!");
+        }
+        List<Integer> getIndexesOfChars = new ArrayList<>();
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == character) {
+                getIndexesOfChars.add(i);
             }
         }
-        return result;
-    }
-
-    public static void main(String[] args) {
-        Search search= new Search();
-        System.out.println(search.getIndexOfChar("terefe",'e'));
+        return getIndexesOfChars;
     }
 }

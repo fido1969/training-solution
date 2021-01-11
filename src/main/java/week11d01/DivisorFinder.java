@@ -6,12 +6,12 @@ package week11d01;
 
 public class DivisorFinder {
 
-    int findDivisors(int n) {
-        if (n==0){
+    public int findDivisors(int n) {
+        if (n == 0) {
             throw new ArithmeticException("/ by zero!");
         }
 
-        if (n<0){
+        if (n < 0) {
             throw new NumberFormatException();
         }
 

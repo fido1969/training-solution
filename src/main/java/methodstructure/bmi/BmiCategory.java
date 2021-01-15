@@ -1,4 +1,4 @@
-package methodstructure;
+package methodstructure.bmi;
 
 public enum BmiCategory {
 

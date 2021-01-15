@@ -1,4 +1,4 @@
-package methodstructure;
+package methodstructure.bmi;
 
 import org.junit.jupiter.api.Test;
 

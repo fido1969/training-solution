@@ -1,4 +1,4 @@
-package a;
+package week06d05.senior;
 
 public enum BottleType {
 

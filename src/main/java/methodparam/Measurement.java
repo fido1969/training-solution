@@ -2,17 +2,17 @@ package methodparam;
 
 public class Measurement {
 
-    private double[] measurement;
+    private double[] numbers;
 
-    public Measurement(double[] measurement) {
-        isEmpty(measurement);
-        this.measurement = measurement;
+    public Measurement(double[] numbers) {
+        isEmpty(numbers);
+        this.numbers = numbers;
     }
 
     public int findFirstIndexInLimit(int lower, int upper) {
 
-        for (int i = 0; i < measurement.length; i++) {
-            if (measurement[i] > lower && measurement[i] < upper) {
+        for (int i = 0; i < numbers.length; i++) {
+            if ((numbers[i] > lower) && (numbers[i] < upper)) {
                 return i;
             }
         }
@@ -23,9 +23,9 @@ public class Measurement {
 
         double min = Double.MAX_VALUE;
 
-        for (int i = 0; i < measurement.length; i++) {
-            if (measurement[i] < min) {
-                min = measurement[i];
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] < min) {
+                min = numbers[i];
             }
         }
         return min;
@@ -35,9 +35,9 @@ public class Measurement {
 
         double max = Double.MIN_VALUE;
 
-        for (int i = 0; i < measurement.length; i++) {
-            if (measurement[i] > max) {
-                max = measurement[i];
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] > max) {
+                max = numbers[i];
             }
         }
         return max;
@@ -47,8 +47,8 @@ public class Measurement {
         return new ExtremValues(minimum(), maximum());
     }
 
-    private void isEmpty(double[] measurement) {
-        if (measurement == null || measurement.length == 0) {
+    private void isEmpty(double[] numbers) {
+        if (numbers == null || numbers.length == 0) {
             throw new IllegalArgumentException("Invalid array!");
         }
     }

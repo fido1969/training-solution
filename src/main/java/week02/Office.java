@@ -63,6 +63,7 @@ public class Office {
                         + " m ," + meetingRooms.get(i).getLength() + " m , " + meetingRooms.get(i).getArea() + " m2");
             }
         }
+
     }
 }
 
